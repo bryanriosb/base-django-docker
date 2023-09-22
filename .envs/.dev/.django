@@ -1,0 +1,19 @@
+DJANGO_SETTINGS_MODULE=lawyers.config.dev
+
+# Redis
+REDIS_URL=redis://redis:6379/0
+
+# Flower
+CELERY_FLOWER_USER=celery_user
+CELERY_FLOWER_PASSWORD=12345678
+
+# Celery
+CELERY_BROKER_URL=redis://redis:6379/0
+CELERY_RESULT_BACKEND=redis://redis:6379/0
+
+# Email
+EMAIL_HOST_USER=email@company.com
+EMAIL_HOST_PASSWORD=123456678
+
+
+

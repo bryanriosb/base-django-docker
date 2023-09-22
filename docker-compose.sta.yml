@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  nginx:
+    container_name: 'nginx-service'
+    build:
+      context: .
+      dockerfile: compose/sta/nginx/nginx.Dockerfile
+    restart: always
+    ports:
+      - '80:80'
+    volumes:
+      - ./lawyers/static:/app/lawyers/static/
+
+  django: &django
+    build:
+      context: .
+      dockerfile: compose/sta/django/Dockerfile
+    image: aclive_django
+    volumes:
+      - .:/app
+      - ./lawyers/static:/app/lawyers/static/
+    env_file:
+      - ./.envs/.sta/.django
+      - ./.envs/.sta/.postgres
+    ports:
+      - '8000:8000'
+    command: /start
