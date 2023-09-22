@@ -12,7 +12,10 @@ DJANGO_APPS = (
     'django.contrib.postgres',
 )
 
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    # Created Apps
+    'apps.users'
+)
 
 THIRD_PARTY_APPS = (
     'rest_framework',

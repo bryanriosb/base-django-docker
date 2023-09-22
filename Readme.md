@@ -6,7 +6,6 @@ Example project name lawyers
 
 - Django REST Framework
 - PostgreSQL
-- Django Tenants (SaaS Apps)
 - Django Channels (Websockets)
 - Redis (Cache)
 - Celery Worker (Background Task)
